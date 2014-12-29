@@ -34,7 +34,6 @@ function unreg_weights = unreg_train(training_X, training_Y, number_of_inputs, i
 	"with Stochastic Gradient Descent"
 	unreg_weights = rand(1, number_of_inputs);
 	learning_rate = 0.1;
-	iteration_number = 10;
 
 	#Calculate weights
 	for iterations = 1:iteration_number
@@ -53,7 +52,6 @@ function reg_weights = reg_train(training_X, training_Y, number_of_inputs, itera
 	"with Regularized Stochastic Gradient Descent"
 	reg_weights = rand(1, number_of_inputs);
 	learning_rate = 0.1;
-	iteration_number = 10;
 
 	#Calculate weights
 	for iterations = 1:iteration_number
@@ -144,7 +142,7 @@ function main(filename)
 
 	#weights = unreg_train(training_X, training_Y, number_of_inputs, iteration_number);
 	#test(weights, test_X, test_Y);
-	#weights = reg_newton_train(training_X, training_Y, number_of_inputs, iteration_number);
+	#weights = reg_train(training_X, training_Y, number_of_inputs, iteration_number);
 	#test(weights, test_X, test_Y);
 	weights = newton_train(training_X, training_Y, number_of_inputs, iteration_number);
 
